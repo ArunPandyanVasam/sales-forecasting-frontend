@@ -6,7 +6,7 @@ const TitleTagline = () => {
   return (
     <Container className={styles.container}>
       <Box className={styles.box}>
-        <Typography variant="h4" gutterBottom className={styles.heading}>
+        <Typography variant="h4" className={styles.heading} gutterBottom>
           Smart Sales Forecasting and Reorder Recommendations
         </Typography>
         <Typography variant="h6" className={styles.subheading}>
