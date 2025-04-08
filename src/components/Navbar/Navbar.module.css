@@ -6,7 +6,7 @@
 }
 
 .toolbar {
-  color: black;
+  color: 	#1e1e1e;
   min-height: 64px;
   display: flex;
   justify-content: space-between;
