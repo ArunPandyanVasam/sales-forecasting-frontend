@@ -39,13 +39,13 @@
 }
 
 .button {
-  background-color: #ff5722 !important; /* Replace with your desired color */
+  background-color: #ff5722 !important;
   color: white !important;
   padding: 12px 24px;
   font-size: 1rem;
   border-radius: 8px;
   transition: transform 0.2s ease;
-  text-transform: none; /* Optional: keep normal casing */
+  text-transform: none;
 }
 
 .button:hover {
