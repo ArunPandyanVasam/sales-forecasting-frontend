@@ -1,20 +1,20 @@
 import React, { useState } from 'react';
-import FileUploadForm from '../../components/FileUploadForm/FileUploadForm';
+import ManualInputForm from '../../components/ManualInputForm/ManualInputForm';
 import { Container, Box, Typography } from '@mui/material';
 
-const TrainPage = () => {
+const ManualInputPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
 
   return (
     <Container>
       <Box mt={4}>
-        <Typography variant="h4" align="center">Train Model with File</Typography>
+        <Typography variant="h4" align="center">Train Model with Manual Input</Typography>
         <Typography variant="body1" align="center" gutterBottom>
-          Upload your CSV/JSON file to train the model.
+          Enter product details and historical data to train the model.
         </Typography>
         
         {!modelTrained ? (
-          <FileUploadForm onModelTrained={() => setModelTrained(true)} />
+          <ManualInputForm onModelTrained={() => setModelTrained(true)} />
         ) : (
           <Typography variant="h6" align="center">Model trained successfully! Now you can make predictions.</Typography>
         )}
@@ -23,4 +23,4 @@ const TrainPage = () => {
   );
 };
 
-export default TrainPage;
+export default ManualInputPage;

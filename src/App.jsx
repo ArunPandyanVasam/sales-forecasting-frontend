@@ -2,15 +2,15 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import TrainPage from "./pages/TrainPage/TrainPage";
-import PredictPage from "./pages/PredictPage/PredictPage";
+import ManualInputPage from "./pages/ManualInputPage/ManualInputPage";
 
 const App = () => {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/train" element={<TrainPage />} />
-        <Route path="/predict" element={<PredictPage />} />
+        <Route path="/train/file" element={<TrainPage />} />
+        <Route path="/train/manual" element={<ManualInputPage />} />
       </Routes>
     </Router>
   );

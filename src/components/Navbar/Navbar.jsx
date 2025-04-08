@@ -1,11 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { AppBar, Toolbar, Typography, Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <div>
-      <h1>Navbar Component</h1>
-    </div>
-  )
-}
+    <AppBar position="sticky" color="primary">
+      <Toolbar>
+        <Typography variant="h6" style={{ flexGrow: 1 }}>
+          Smart Sales Forecasting
+        </Typography>
+        <Button color="inherit" component={Link} to="/">
+          Home
+        </Button>
+        <Button color="inherit" component={Link} to="/train/file">
+          Train Model
+        </Button>
+        <Button color="inherit" component={Link} to="/train/manual">
+          Predict Sales
+        </Button>
+      </Toolbar>
+    </AppBar>
+  );
+};
 
-export default Navbar
+export default Navbar;
