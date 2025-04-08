@@ -1,18 +1,18 @@
-/* HeroCarousel.module.css */
-
 .carouselContainer {
   position: relative;
   width: 100%;
   max-width: 1200px;
-  margin: 50px auto 0;
+  margin: 60px auto 0;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .carouselImage {
   width: 100%;
   height: 400px;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  box-shadow: 0px 6px 24px rgba(0, 0, 0, 0.15);
 }
 
 .carouselTextBox {
@@ -22,9 +22,9 @@
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
-  max-width: 80%;
+  max-width: 85%;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .carouselTitle {
@@ -35,4 +35,38 @@
 .carouselDescription {
   font-size: 1.2rem;
   margin-top: 10px;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+  .carouselImage {
+    height: 300px;
+  }
+
+  .carouselTextBox {
+    max-width: 95%;
+    padding: 16px;
+  }
+
+  .carouselTitle {
+    font-size: 1.5rem;
+  }
+
+  .carouselDescription {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselImage {
+    height: 220px;
+  }
+
+  .carouselTitle {
+    font-size: 1.3rem;
+  }
+
+  .carouselDescription {
+    font-size: 0.95rem;
+  }
 }

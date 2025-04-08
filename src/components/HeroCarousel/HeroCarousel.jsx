@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './HeroCarousel.module.css';
 
-// Importing static images from assets folder
+// Static image from assets
 import forecastingImage from '../../assets/images/forecasting.jpg';
 
 const carouselItems = [
@@ -35,11 +35,11 @@ const HeroCarousel = () => {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 600,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false, // Optional: Hides arrows for a cleaner look
-    fade: true, // Smooth fade transition between slides
+    arrows: false,
+    fade: true
   };
 
   return (
@@ -47,14 +47,12 @@ const HeroCarousel = () => {
       <Slider {...settings}>
         {carouselItems.map((item, index) => (
           <Box key={index} sx={{ position: 'relative' }}>
-            {/* Image with professional look */}
             <img
               src={item.image}
               alt={item.title}
               className={styles.carouselImage}
             />
 
-            {/* Title and Description Text */}
             <Box className={styles.carouselTextBox}>
               <Typography className={styles.carouselTitle} variant="h6">
                 {item.title}
