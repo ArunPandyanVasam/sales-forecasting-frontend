@@ -27,7 +27,7 @@ const Navbar = () => {
   const navItems = [
     { label: "Home", to: "/" },
     { label: "About", to: "/train/file" },
-    { label: "Contact", to: "/train/manual" },
+    { label: "Blog", to: "/train/manual" },
   ];
 
   return (
@@ -40,6 +40,7 @@ const Navbar = () => {
             style={{ flexGrow: 1 }}
           >
             <img src={logo} alt="Logo" className={styles.logo} />
+            Pepper
           </Typography>
 
           {isMobile ? (

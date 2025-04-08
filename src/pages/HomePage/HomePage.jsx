@@ -7,11 +7,13 @@ import FeatureHighlights from "../../components/FeatureHighlights/FeatureHighlig
 import HowItWorks from "../../components/HowItWorks/HowItWorks";
 import CallToAction from "../../components/CallToAction/CallToAction";
 import styles from './HomePage.module.css';
+import HeroCarousel from "../../components/HeroCarousel/HeroCarousel";
 
 const HomePage = () => {
   return (
     <div className={styles.container}>
       <Navbar />
+      <HeroCarousel />
       <TitleTagline />
       <TrainOptions />
       <FeatureHighlights />

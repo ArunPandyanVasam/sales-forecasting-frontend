@@ -6,20 +6,22 @@
 }
 
 .toolbar {
+  color: black;
   min-height: 64px;
   display: flex;
   justify-content: space-between;
   padding: 0 16px;
-  background-color: #1e1e2f;
+  background-color: #ffffff;
 }
 
 .navButton:hover {
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 0, 0, 0.1);
   transition: background-color 0.3s ease;
   border-radius: 4px;
 }
 
 .navbarTitle {
+  color: rgb(10, 131, 46);
   display: flex;
   align-items: center;
   font-weight: bold;
