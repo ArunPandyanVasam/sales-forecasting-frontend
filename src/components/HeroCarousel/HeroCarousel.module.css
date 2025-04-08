@@ -37,7 +37,7 @@
   margin-top: 10px;
 }
 
-/* Responsive Tweaks */
+/* Responsive */
 @media (max-width: 768px) {
   .carouselImage {
     height: 300px;

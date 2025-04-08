@@ -29,17 +29,17 @@
 /* Tablets */
 @media (max-width: 900px) {
   .footerText {
-    font-size: 0.95rem; /* Slightly smaller font size */
+    font-size: 0.95rem;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .footerText {
-    font-size: 0.85rem; /* Further reduced font size */
+    font-size: 0.85rem;
   }
 
   .footer {
-    padding: 15px 0; /* Adjust padding for smaller screens */
+    padding: 15px 0;
   }
 }

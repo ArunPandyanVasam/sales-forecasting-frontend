@@ -45,7 +45,7 @@
   background-color: #b300ff;
 }
 
-/* Responsive Adjustments */
+/* Responsive */
 @media (max-width: 768px) {
   .wrapper {
     margin-top: 40px;
