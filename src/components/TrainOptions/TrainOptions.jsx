@@ -1,7 +1,8 @@
 import React from 'react';
 import { Grid, Button, Box } from '@mui/material';
+import { Link } from 'react-router-dom';
 
-const TrainOptions = ({ onTrainingOptionSelect }) => {
+const TrainOptions = () => {
   return (
     <Box sx={{ display: 'flex', justifyContent: 'center', marginTop: 4 }}>
       <Grid container spacing={3} justifyContent="center" alignItems="center">
@@ -10,7 +11,8 @@ const TrainOptions = ({ onTrainingOptionSelect }) => {
             variant="contained"
             color="primary"
             fullWidth
-            onClick={() => onTrainingOptionSelect('file')}
+            component={Link}
+            to="/train/file"
             size="large"
           >
             Upload CSV/JSON File to Train
@@ -21,7 +23,8 @@ const TrainOptions = ({ onTrainingOptionSelect }) => {
             variant="contained"
             color="secondary"
             fullWidth
-            onClick={() => onTrainingOptionSelect('manual')}
+            component={Link}
+            to="/train/manual"
             size="large"
           >
             Enter Manual Input to Train

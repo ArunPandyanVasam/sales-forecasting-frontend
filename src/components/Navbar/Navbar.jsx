@@ -13,10 +13,10 @@ const Navbar = () => {
           Home
         </Button>
         <Button color="inherit" component={Link} to="/train/file">
-          Train Model
+          About
         </Button>
         <Button color="inherit" component={Link} to="/train/manual">
-          Predict Sales
+          Contact
         </Button>
       </Toolbar>
     </AppBar>
