@@ -1,40 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Typography, Box, CircularProgress } from '@mui/material';
 import axios from 'axios';
-import { styled } from '@mui/material/styles';
-
-// Styled components for better control
-const StyledBox = styled(Box)(({ theme }) => ({
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-  backgroundColor: theme.palette.background.paper,
-  padding: theme.spacing(4),
-  borderRadius: 8,
-  boxShadow: theme.shadows[5],
-  maxWidth: 400,
-  margin: 'auto',
-  textAlign: 'center',
-}));
-
-const StyledButton = styled(Button)(({ theme }) => ({
-  marginTop: theme.spacing(2),
-  padding: theme.spacing(1.5, 4),
-  fontWeight: 600,
-  fontSize: '1rem',
-  borderRadius: 30,
-  transition: 'background-color 0.3s ease',
-  '&:hover': {
-    backgroundColor: theme.palette.primary.dark,
-  },
-}));
-
-const StyledTypography = styled(Typography)(({ theme }) => ({
-  fontWeight: 500,
-  marginBottom: theme.spacing(2),
-  color: theme.palette.text.primary,
-}));
+import styles from './FileUploadForm.module.css';
 
 const FileUploadForm = ({ onModelTrained }) => {
   const [file, setFile] = useState(null);
@@ -71,37 +38,39 @@ const FileUploadForm = ({ onModelTrained }) => {
   };
 
   return (
-    <StyledBox>
-      <StyledTypography variant="h6">Upload Your Training File</StyledTypography>
+    <Box className={styles.fileInputContainer}>
+      <Typography variant="h6" className={styles.title}>
+        Upload Your Training File
+      </Typography>
       <input
         type="file"
         onChange={handleFileChange}
-        style={{
-          display: 'none',
-        }}
+        style={{ display: 'none' }}
         id="file-input"
+        className={styles.fileInput}
       />
-      <label htmlFor="file-input">
-        <Button variant="outlined" component="span" color="primary" fullWidth>
+      <label htmlFor="file-input" className={styles.chooseFileLabel}>
+        <Button variant="outlined" component="span" color="primary" className={styles.chooseFileButton}>
           Choose File
         </Button>
       </label>
 
       {file && (
-        <Typography variant="body2" color="textSecondary" mt={2}>
+        <Typography variant="body2" color="textSecondary" className={styles.fileNameText}>
           {file.name}
         </Typography>
       )}
 
-      <StyledButton
+      <Button
         variant="contained"
         color="primary"
         onClick={handleFileUpload}
         disabled={loading || !file}
+        className={styles.uploadButton}
       >
         {loading ? <CircularProgress size={24} color="inherit" /> : 'Upload and Train Model'}
-      </StyledButton>
-    </StyledBox>
+      </Button>
+    </Box>
   );
 };
 
