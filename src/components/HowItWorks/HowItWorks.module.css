@@ -12,6 +12,8 @@
 .container {
   margin-top: 120px;
   margin-bottom: 40px;
+  padding: 0 24px;
+  box-sizing: border-box;
 }
 
 .heading {
@@ -19,10 +21,12 @@
   font-size: 1.8rem;
   margin-bottom: 30px;
   color: #1e1e1e;
+  text-align: center;
 }
 
 .stepper {
   background-color: transparent;
+  padding: 0 16px;
 }
 
 .stepWrapper {
@@ -35,9 +39,61 @@
   font-weight: 500;
   color: #333;
   text-align: center;
+  max-width: 100px;
+  margin: 0 auto;
 }
 
 .icon {
   font-size: 30px;
   color: rgb(10, 131, 46);
+}
+
+/* RESPONSIVENESS */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .container {
+    margin-top: 80px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .stepLabel {
+    font-size: 0.9rem;
+    max-width: 90px;
+  }
+
+  .icon {
+    font-size: 28px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding: 0 16px;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+  }
+
+  .stepLabel {
+    font-size: 0.85rem;
+    max-width: 80px;
+  }
+
+  .icon {
+    font-size: 26px;
+  }
+
+  .stepper {
+    padding: 0;
+  }
 }
