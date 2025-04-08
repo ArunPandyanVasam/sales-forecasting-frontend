@@ -21,7 +21,7 @@ const TrainOptions = () => {
             fullWidth
             component={Link}
             to="/train/file"
-            size="large"
+            size="small"
             startIcon={<UploadFileIcon />}
             className={styles.buttonPrimary}
           >
@@ -34,7 +34,7 @@ const TrainOptions = () => {
             fullWidth
             component={Link}
             to="/train/manual"
-            size="large"
+            size="small"
             startIcon={<EditIcon />}
             className={styles.buttonSecondary}
           >

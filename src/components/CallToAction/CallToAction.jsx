@@ -14,7 +14,6 @@ const CallToAction = () => (
       </Typography>
       <Button
         variant="contained"
-        color="secondary"
         component={Link}
         to="/train/file"
         size="large"
