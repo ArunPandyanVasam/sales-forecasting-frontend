@@ -1,5 +1,3 @@
-/* CallToAction.module.css */
-
 @keyframes fadeInCTA {
   from {
     opacity: 0;
@@ -18,12 +16,17 @@
   padding-bottom: 40px;
   animation: fadeInCTA 0.8s ease-out forwards;
   opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
   text-align: center;
   animation: fadeInCTA 0.8s ease-out forwards;
   opacity: 0;
+  max-width: 600px;
+  width: 100%;
 }
 
 .heading {
@@ -51,4 +54,50 @@
 .button:hover {
   background-color: #e64a19 !important;
   transform: scale(1.03);
+}
+
+/* RESPONSIVENESS */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .heading {
+    font-size: 1.6rem;
+  }
+
+  .subheading {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .heading {
+    font-size: 1.4rem;
+  }
+
+  .subheading {
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
 }
