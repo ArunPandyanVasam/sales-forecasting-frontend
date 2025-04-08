@@ -12,7 +12,7 @@
   }
   
   .footer {
-    background-color: #1976d2; /* Primary Blue */
+    background-color: rgb(10, 131, 46);
     color: white;
     padding: 20px;
     animation: fadeInFooter 0.6s ease forwards;
