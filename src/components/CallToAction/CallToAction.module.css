@@ -1,0 +1,54 @@
+/* CallToAction.module.css */
+
+@keyframes fadeInCTA {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    background-color: #0d47a1; /* Primary Blue */
+    color: white;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    animation: fadeInCTA 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .content {
+    text-align: center;
+    animation: fadeInCTA 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .heading {
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  
+  .subheading {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #e3f2fd; /* Light Blue */
+  }
+  
+  .button {
+    background-color: #ff4081; /* Secondary color */
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+  }
+  
+  .button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  

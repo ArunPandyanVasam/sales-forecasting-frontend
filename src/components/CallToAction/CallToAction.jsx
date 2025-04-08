@@ -1,14 +1,15 @@
 import React from 'react';
 import { Box, Button, Typography, Container } from '@mui/material';
 import { Link } from 'react-router-dom';
+import styles from './CallToAction.module.css';
 
 const CallToAction = () => (
-  <Box bgcolor="primary.main" color="white" py={5}>
-    <Container sx={{ textAlign: 'center' }}>
-      <Typography variant="h5" gutterBottom>
+  <Box className={styles.container}>
+    <Container className={styles.content}>
+      <Typography variant="h5" className={styles.heading} gutterBottom>
         Ready to Get Accurate Sales Predictions?
       </Typography>
-      <Typography variant="body1" paragraph>
+      <Typography variant="body1" className={styles.subheading} paragraph>
         Start by uploading your data or entering details manually.
       </Typography>
       <Button
@@ -17,6 +18,7 @@ const CallToAction = () => (
         component={Link}
         to="/train/file"
         size="large"
+        className={styles.button}
       >
         Get Started
       </Button>
