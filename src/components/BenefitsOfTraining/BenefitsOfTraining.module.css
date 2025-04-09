@@ -1,0 +1,51 @@
+/* General container styling for BenefitsOfTraining */
+.benefitsContainer {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  max-width: 450px;
+  /* text-align: center;
+  margin-left: auto;
+  margin-right: auto; */
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50; /* Dark color for title */
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.benefitsList {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.benefitItem {
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.benefitItem:hover {
+  background-color: #f5f7fa;
+}
+
+.MuiListItemText-primary {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #34495e;
+  margin-bottom: 12px;
+}
+
+.MuiListItemText-primary:focus {
+  outline: none;
+}

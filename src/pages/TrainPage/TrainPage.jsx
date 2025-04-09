@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import FileUploadForm from "../../components/FileUploadForm/FileUploadForm";
-import { Container, Box, Typography, Grid } from "@mui/material";
+import { Box, Typography, Grid } from "@mui/material";
 import styles from "./TrainPage.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/Footer/Footer";
 import CallToAction from "../../components/CallToAction/CallToAction";
+
+import BenefitsOfTraining from "../../components/BenefitsOfTraining/BenefitsOfTraining";
+import FAQBox from "../../components/FAQBox/FAQBox";
 import TrainingInstructions from "../../components/TrainingInstructions/TrainingInstructions";
-import SampleDataPreview from "../../components/SampleDataPreview/SampleDataPreview";
 
 const TrainPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
@@ -14,16 +16,23 @@ const TrainPage = () => {
   return (
     <div className={styles.trainPageWrapper}>
       <Navbar />
-      <Container className={styles.trainContainer}>
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
+
+      <div className={styles.mainContent}>
+        <Grid container spacing={4} justifyContent="space-evenly">
+          {/* Benefits Section */}
+          <Grid item xs={12} md={6} className={styles.gridItem}>
+            <BenefitsOfTraining />
+          </Grid>
+
+          {/* Training Instructions Section */}
+          <Grid item xs={12} md={6} className={styles.gridItem}>
             <TrainingInstructions />
           </Grid>
-          <Grid item xs={12} md={6}>
-            <SampleDataPreview />
-          </Grid>
         </Grid>
+      </div>
 
+      {/* File Upload Section */}
+      <div className={styles.trainContainer}>
         <Box className={styles.trainBox}>
           <Typography variant="h4" align="center" className={styles.title}>
             Train Model with File
@@ -50,7 +59,13 @@ const TrainPage = () => {
             </Typography>
           )}
         </Box>
-      </Container>
+      </div>
+
+      {/* FAQ Section */}
+      <div className={styles.faqSection}>
+        <FAQBox />
+      </div>
+
       <CallToAction />
       <Footer />
     </div>
