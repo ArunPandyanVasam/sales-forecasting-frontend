@@ -11,7 +11,7 @@ import HeroCarousel from "../../components/HeroCarousel/HeroCarousel";
 
 const HomePage = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.homePageWrapper}>
       <Navbar />
       <HeroCarousel />
       <TitleTagline />

@@ -10,7 +10,7 @@ const TrainPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
 
   return (
-    <div>
+    <div className={styles.trainPageWrapper}>
       <Navbar />
       <Container className={styles.trainContainer}>
         <Box className={styles.trainBox}>
