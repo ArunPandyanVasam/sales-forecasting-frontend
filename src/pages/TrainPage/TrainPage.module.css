@@ -1,11 +1,17 @@
 
+
+.mainContent {
+  background-color: aliceblue;
+}
+
 /* Individual Section Box Styling */
 .trainContainer {
+  background-color: antiquewhite;
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;
   justify-content: center;
-  width: 100%;
+  /* width: 100%; */
 }
 
 .trainBox {
@@ -35,6 +41,12 @@
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+
+.faqSection {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin-bottom: 25px;
 }
 
 /* Success Message */
