@@ -1,51 +1,36 @@
-.trainPageContainer {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f0f4f8;
-  }
-  
-  .trainPageContainerInner {
-    padding: 40px;
-  }
-  
-  .titleBox {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .titleText {
-    font-size: 36px;
-    font-weight: 600;
-    color: #333;
-  }
-  
-  .instructionsText {
-    font-size: 16px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  .formGrid {
-    margin-top: 30px;
-  }
-  
-  .successMessageBox {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e8f5e9;
-    border: 1px solid #388e3c;
-    border-radius: 5px;
-  }
-  
-  .successMessageText {
-    color: #388e3c;
-    font-size: 16px;
-    font-weight: 500;
-  }
-  
-  .progressText {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #1976d2;
-    font-weight: 600;
-  }
-  
+.trainContainer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.trainBox {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.title {
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.subtitle {
+  color: #666;
+  margin-bottom: 32px;
+  font-size: 1rem;
+}
+
+.uploadFormWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.successMessage {
+  margin-top: 32px;
+  color: #2e7d32;
+  font-weight: 600;
+}
