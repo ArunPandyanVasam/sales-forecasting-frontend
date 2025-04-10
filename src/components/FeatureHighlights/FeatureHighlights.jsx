@@ -32,17 +32,20 @@ const features = [
 
 const FeatureHighlights = () => (
   <Container className={styles.container}>
-    <Typography variant="h5" align="center" className={styles.heading}>
+    {/* <Typography variant="h5" align="center" className={styles.heading}>
       Why Use This Tool?
-    </Typography>
+    </Typography> */}
     <Grid container spacing={3} className={styles.grid}>
       {features.map((feat, idx) => (
         <Grid item xs={12} sm={6} md={3} key={idx}>
           <Paper
-            className={styles.featureCard}
-            style={{ animationDelay: `${idx * 0.2}s` }}
+            className={`${styles.featureCard} ${styles[`delay${idx}`]}`}
+            role="region"
+            aria-label={feat.title}
           >
-            <div className={styles.iconWrapper}>{feat.icon}</div>
+            <div className={styles.iconWrapper} aria-label={`Icon for ${feat.title}`}>
+              {feat.icon}
+            </div>
             <Typography variant="h6" className={styles.cardTitle}>
               {feat.title}
             </Typography>

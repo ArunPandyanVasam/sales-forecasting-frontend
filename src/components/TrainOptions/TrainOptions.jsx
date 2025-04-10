@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Button, Box } from "@mui/material";
+import { Grid, Button, Box, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
 import UploadFileIcon from "@mui/icons-material/UploadFile";
 import EditIcon from "@mui/icons-material/Edit";
@@ -8,14 +8,19 @@ import styles from "./TrainOptions.module.css";
 const TrainOptions = () => {
   return (
     <Box className={styles.wrapper}>
+      <Typography variant="h4" align="center" className={styles.title}>
+        Choose Your Training Method
+      </Typography>
+
       <Grid
         container
         spacing={3}
+        direction="column"
         justifyContent="center"
         alignItems="center"
         className={styles.gridContainer}
       >
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Button
             variant="contained"
             fullWidth
@@ -28,7 +33,7 @@ const TrainOptions = () => {
             Upload CSV/JSON File to Train
           </Button>
         </Grid>
-        <Grid item xs={12} sm={6} md={4}>
+        <Grid item xs={12}>
           <Button
             variant="contained"
             fullWidth
