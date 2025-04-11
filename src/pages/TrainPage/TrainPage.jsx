@@ -9,6 +9,7 @@ import CallToAction from "../../components/CallToAction/CallToAction";
 import BenefitsOfTraining from "../../components/BenefitsOfTraining/BenefitsOfTraining";
 import FAQBox from "../../components/FAQBox/FAQBox";
 import TrainingInstructions from "../../components/TrainingInstructions/TrainingInstructions";
+import PredictionForm from "../../components/PredictionForm/PredictionForm";
 
 const TrainPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
@@ -66,6 +67,8 @@ const TrainPage = () => {
           )}
         </Box>
       </div>
+
+      <PredictionForm />
 
       {/* FAQ Section */}
       <div className={styles.faqSection}>

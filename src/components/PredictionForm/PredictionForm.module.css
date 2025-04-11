@@ -1,0 +1,26 @@
+.formWrapper {
+    max-width: 500px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #fafafa;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submitButton {
+    margin-top: 1.5rem;
+  }
+  
+  .resultBox {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    background-color: #f0f7ff;
+    border: 1px solid #cce4ff;
+  }
+  
