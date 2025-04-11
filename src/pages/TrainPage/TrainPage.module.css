@@ -1,76 +1,97 @@
-
+/* MAIN LAYOUT */
+.trainPageWrapper {
+  background-color: #e9e6e2;
+}
 
 .mainContent {
-  background-color: aliceblue;
+  /* background-color: #eaf4ff; */
+  padding: 60px 20px;
 }
 
-/* Individual Section Box Styling */
+/* GRID ITEMS */
+.gridItem {
+  padding: 20px;
+}
+
+/* TRAINING CONTAINER */
 .trainContainer {
-  background-color: antiquewhite;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  background-color: #fefefe;
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
-  /* width: 100%; */
 }
 
+/* TRAIN BOX STYLING */
 .trainBox {
   width: 100%;
   max-width: 600px;
   background-color: #ffffff;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  padding: 48px 32px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
+.trainBox:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* TITLES AND TEXT */
 .title {
   font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
+  font-size: 2rem;
+  color: #2e3c50;
+  margin-bottom: 16px;
 }
 
 .subtitle {
   font-size: 1.1rem;
-  color: #777;
+  color: #6e7a8a;
   margin-bottom: 30px;
 }
 
-/* Upload Form */
+/* UPLOAD FORM */
 .uploadFormWrapper {
   display: flex;
   justify-content: center;
   margin-top: 20px;
 }
 
-.faqSection {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  margin-bottom: 25px;
-}
-
-/* Success Message */
+/* SUCCESS MESSAGE */
 .successMessage {
   margin-top: 40px;
   color: #2e7d32;
   font-weight: 600;
+  font-size: 1.1rem;
 }
 
-/* Media Queries */
+/* FAQ SECTION */
+.faqSection {
+  /* background-color: #ffffff; */
+  padding: 80px 20px;
+  margin-bottom: 40px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
+}
+
+/* RESPONSIVENESS */
 @media (max-width: 768px) {
   .mainContent {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    gap: 15px; /* Adjusted gap for smaller screens */
+    padding: 40px 16px;
+  }
+
+  .gridItem {
+    padding: 12px 0;
   }
 
   .trainBox {
-    padding: 20px;
+    padding: 32px 20px;
     max-width: 100%;
   }
 
   .title {
-    font-size: 1.8rem;
+    font-size: 1.75rem;
   }
 
   .subtitle {
@@ -78,12 +99,24 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .mainContent {
-    gap: 10px; /* Adjusted gap further for very small screens */
+    padding: 30px 12px;
   }
 
   .trainBox {
-    padding: 15px;
+    padding: 24px 16px;
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .successMessage {
+    font-size: 1rem;
   }
 }
