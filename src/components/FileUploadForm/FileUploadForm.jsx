@@ -20,14 +20,15 @@ const FileUploadForm = ({ onModelTrained }) => {
     formData.append('file', file);
 
     try {
-      // Assuming your backend endpoint is '/train_model'
-      const response = await axios.post('http://localhost:5000/train_model', formData, {
+      const response = await axios.post('http://127.0.0.1:5000/api/train_model', formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
       });
-      if (response.status === 200) {
-        onModelTrained(); // Notify parent that model has been trained
+
+      if (response.status === 200 && response.data?.message) {
+        const backendMessage = response.data.message;
+        onModelTrained(backendMessage); // pass backend message to parent
       }
     } catch (error) {
       console.error('Error uploading file:', error);

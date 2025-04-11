@@ -12,6 +12,12 @@ import TrainingInstructions from "../../components/TrainingInstructions/Training
 
 const TrainPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
+  const [trainMessage, setTrainMessage] = useState("");
+
+  const handleModelTrained = (message) => {
+    setTrainMessage(message);
+    setModelTrained(true);
+  };
 
   return (
     <div className={styles.trainPageWrapper}>
@@ -47,7 +53,7 @@ const TrainPage = () => {
 
           {!modelTrained ? (
             <div className={styles.uploadFormWrapper}>
-              <FileUploadForm onModelTrained={() => setModelTrained(true)} />
+              <FileUploadForm onModelTrained={handleModelTrained} />
             </div>
           ) : (
             <Typography
@@ -55,7 +61,7 @@ const TrainPage = () => {
               align="center"
               className={styles.successMessage}
             >
-              Model trained successfully! Now you can make predictions.
+              {trainMessage}
             </Typography>
           )}
         </Box>
