@@ -20,6 +20,7 @@ const PredictionForm = () => {
 
   const [loading, setLoading] = useState(false);
   const [predictionResult, setPredictionResult] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -31,8 +32,9 @@ const PredictionForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setErrorMessage("");
+    setPredictionResult(null);
 
-    // Convert historical_sales string to array of numbers
     const salesArray = formData.historical_sales
       .split(",")
       .map((val) => parseInt(val.trim()))
@@ -57,8 +59,10 @@ const PredictionForm = () => {
         setPredictionResult(response.data);
       }
     } catch (error) {
-      console.error("Prediction failed:", error);
-      alert("Prediction failed. Please try again.");
+      const message =
+        error.response?.data?.error ||
+        "Prediction failed. Please try again later.";
+      setErrorMessage(message);
     } finally {
       setLoading(false);
     }
@@ -139,6 +143,12 @@ const PredictionForm = () => {
         </Button>
       </form>
 
+      {errorMessage && (
+        <Box className={styles.errorBox}>
+          <Typography color="error">{errorMessage}</Typography>
+        </Box>
+      )}
+
       {predictionResult && (
         <Box className={styles.resultBox}>
           <Typography variant="h6">Prediction Result:</Typography>
@@ -149,7 +159,8 @@ const PredictionForm = () => {
           </Typography>
           <Typography>Reasoning: {predictionResult.reasoning}</Typography>
           <Typography>
-            Reorder Suggestion: {predictionResult.reorder_suggestion}
+            Reorder Suggestion:{" "}
+            {predictionResult.reorder_suggestion === 1 ? "Yes" : "No"}
           </Typography>
         </Box>
       )}
