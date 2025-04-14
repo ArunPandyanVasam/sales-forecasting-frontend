@@ -12,6 +12,7 @@
   justify-content: space-between;
   padding: 0 16px;
   background-color: #ffffff;
+  justify-content: space-around;
 }
 
 .navButton:hover {
