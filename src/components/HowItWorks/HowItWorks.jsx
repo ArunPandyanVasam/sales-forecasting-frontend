@@ -9,22 +9,23 @@ import styles from './HowItWorks.module.css';
 
 const steps = [
   {
-    label: 'Upload data or enter manually',
+    label: 'Easily upload or input your sales data',
     icon: <UploadFileIcon className={styles.icon} />
   },
   {
-    label: 'Train the forecasting model',
+    label: 'Let Pepper train a smart forecasting model for you',
     icon: <AutoGraphIcon className={styles.icon} />
   },
   {
-    label: 'Enter product data for prediction',
+    label: 'Provide product details to get instant insights',
     icon: <InventoryIcon className={styles.icon} />
   },
   {
-    label: 'Receive predictions and reorder advice',
+    label: 'Receive actionable predictions and reorder guidance',
     icon: <AssignmentTurnedInIcon className={styles.icon} />
   }
 ];
+
 
 const HowItWorks = () => (
   <Container className={styles.container}>
