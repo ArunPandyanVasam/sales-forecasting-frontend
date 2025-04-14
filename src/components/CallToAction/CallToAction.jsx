@@ -12,7 +12,7 @@ const CallToAction = () => (
       <Typography variant="body1" className={styles.subheading} paragraph>
         Start by uploading your data or entering details manually.
       </Typography>
-      <Button
+      {/* <Button
         variant="contained"
         component={Link}
         to="/train/file"
@@ -20,7 +20,7 @@ const CallToAction = () => (
         className={styles.button}
       >
         Get Started
-      </Button>
+      </Button> */}
     </Container>
   </Box>
 );
