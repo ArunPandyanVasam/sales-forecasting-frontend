@@ -9,7 +9,7 @@ const TrainOptions = () => {
   return (
     <Box className={styles.wrapper}>
       <Typography variant="h4" align="center" className={styles.title}>
-        Choose Your Training Method
+        Get Started with Smart Forecasting
       </Typography>
 
       <Grid
@@ -30,7 +30,7 @@ const TrainOptions = () => {
             startIcon={<UploadFileIcon />}
             className={styles.buttonPrimary}
           >
-            Upload CSV/JSON File to Train
+            Upload Sales File (CSV/JSON)
           </Button>
         </Grid>
         <Grid item xs={12}>
@@ -43,7 +43,7 @@ const TrainOptions = () => {
             startIcon={<EditIcon />}
             className={styles.buttonSecondary}
           >
-            Enter Manual Input to Train
+            Add Sales Data Manually
           </Button>
         </Grid>
       </Grid>
