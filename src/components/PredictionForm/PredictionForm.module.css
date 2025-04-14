@@ -1,34 +1,92 @@
 .formWrapper {
-    max-width: 500px;
-    margin: 2rem auto;
-    padding: 24px;
-    background: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+  max-width: 600px;
+  margin: 60px auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.paperForm,
+.resultCard {
+  padding: 30px;
+  border-radius: 12px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Heading Styling */
+.resultCard h5 {
+  color: #2e7d32;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+/* Buttons */
+.submitButton,
+.resetButton {
+  margin-top: 24px;
+  padding: 12px;
+  font-weight: 600;
+  border-radius: 8px;
+}
+
+/* Result Text Styling */
+.resultCard p,
+.resultCard span,
+.resultCard h6,
+.resultCard strong {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.5;
+}
+
+/* Error Message */
+.errorBox {
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* Responsive Queries */
+@media (max-width: 768px) {
+  .formWrapper {
+    margin: 40px 16px;
   }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
+
+  .paperForm,
+  .resultCard {
+    padding: 20px;
   }
-  
-  .submitButton {
-    margin-top: 16px;
+
+  .submitButton,
+  .resetButton {
+    padding: 10px;
   }
-  
-  .resultBox {
-    margin-top: 24px;
+}
+
+@media (max-width: 480px) {
+  .formWrapper {
+    margin: 30px 12px;
+  }
+
+  .paperForm,
+  .resultCard {
     padding: 16px;
-    background-color: #f0fdf4;
-    border: 1px solid #a7f3d0;
-    border-radius: 8px;
   }
-  
-  .errorBox {
-    margin-top: 24px;
-    padding: 16px;
-    background-color: #ffeaea;
-    border: 1px solid #ffcccc;
-    border-radius: 8px;
+
+  .submitButton,
+  .resetButton {
+    padding: 10px 12px;
+    font-size: 14px;
   }
-  
+
+  .resultCard p,
+  .resultCard span,
+  .resultCard h6,
+  .resultCard strong {
+    font-size: 14px;
+  }
+}
