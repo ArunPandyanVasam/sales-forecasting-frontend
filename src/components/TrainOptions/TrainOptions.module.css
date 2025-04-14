@@ -25,13 +25,13 @@
 .buttonPrimary:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgba(25, 118, 210, 0.3);
-  background-color: #9c27b0;
+  /* background-color: #9c27b0; */
 }
 
 .buttonSecondary:hover {
   transform: scale(1.03);
   box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3);
-  background-color: #b300ff;
+  /* background-color: #b300ff; */
 }
 
 /* Responsive */
