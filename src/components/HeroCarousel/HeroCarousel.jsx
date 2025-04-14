@@ -6,30 +6,47 @@ import 'slick-carousel/slick/slick-theme.css';
 import styles from './HeroCarousel.module.css';
 
 // Static image from assets
-import forecastingImage from '../../assets/images/forecasting.jpg';
+import orderManagementImage from '../../assets/images/forecastingImage.jpg';
+import forecastingImage from '../../assets/images/forecastingImage.jpg';
+import reorderImage from '../../assets/images/forecastingImage.jpg';
+import dataInputImage from '../../assets/images/forecastingImage.jpg';
+import offlineSupportImage from '../../assets/images/forecastingImage.jpg';
+import dashboardImage from '../../assets/images/forecastingImage.jpg';
+
 
 const carouselItems = [
   {
+    title: "Digitized Order Management",
+    description: "Empower distributors to manage and process orders seamlessly with a mobile-first experience.",
+    image: orderManagementImage
+  },
+  {
     title: "Smart Sales Forecasting",
-    description: "Leverage historical data and advanced algorithms to predict future sales.",
+    description: "Predict demand using past order trends, seasonal insights, and event-based spikes—optimized for distributors.",
     image: forecastingImage
   },
   {
-    title: "Flexible Data Input",
-    description: "Upload your data through CSV/JSON files or manually enter it for training.",
-    image: forecastingImage
+    title: "Instant Reorder Suggestions",
+    description: "Automate reorder alerts based on stock levels and predicted demand—no guesswork, just action.",
+    image: reorderImage
   },
   {
-    title: "Real-time Suggestions",
-    description: "Receive real-time reorder recommendations based on accurate predictions.",
-    image: forecastingImage
+    title: "Flexible Data Handling",
+    description: "Upload sales and stock data via files or input manually to train models tailored to your product lines.",
+    image: dataInputImage
   },
   {
-    title: "User-Friendly Interface",
-    description: "Clean, responsive design suitable for all devices, enhancing your workflow.",
-    image: forecastingImage
+    title: "Works Offline & Online",
+    description: "Designed for field reps and rural distributors—access critical features even without a stable connection.",
+    image: offlineSupportImage
+  },
+  {
+    title: "Clean & Intuitive Dashboard",
+    description: "Modern UI that simplifies workflows, helps track performance, and reduces operational friction.",
+    image: dashboardImage
   }
 ];
+
 
 const HeroCarousel = () => {
   const settings = {
