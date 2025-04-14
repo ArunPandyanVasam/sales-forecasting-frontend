@@ -86,16 +86,6 @@ const PredictionForm = () => {
         />
 
         <TextField
-          label="Historical Sales (comma separated)"
-          name="historical_sales"
-          value={formData.historical_sales}
-          onChange={handleChange}
-          fullWidth
-          required
-          margin="normal"
-        />
-
-        <TextField
           label="Current Stock"
           name="current_stock"
           type="number"
