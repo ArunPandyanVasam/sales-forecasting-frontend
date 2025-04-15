@@ -1,53 +1,53 @@
-/* General container styling for BenefitsOfTraining */
 .benefitsContainer {
-  background-color: #FFFFFF;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 50px;
-  margin-bottom: 50px;
-  max-width: 450px;
-  opacity: 0.8;
-  /* text-align: center;
-  margin-left: auto;
-  margin-right: auto; */
+  background-color: #ffffff;
+  padding: 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.06);
+  margin: 80px auto;
+  max-width: 540px;
+  transition: box-shadow 0.3s ease;
+}
+
+.benefitsContainer:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #17181a; /* Dark color for title */
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .subtitle {
-  font-size: 1.15rem;
-  color: #242c2c;
-  margin-bottom: 25px;
-  line-height: 1.6;
+  font-size: 1.125rem;
+  color: #4b5563;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .benefitsList {
-  text-align: left;
-  margin-top: 30px;
+  padding: 0;
+  margin-top: 10px;
 }
 
 .benefitItem {
-  transition: background-color 0.3s ease;
-  border-bottom: 1px solid #ecf0f1;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  border-radius: 8px;
+  cursor: default;
 }
 
 .benefitItem:hover {
-  background-color: #f5f7fa;
+  background-color: #f9fafb;
+  transform: translateX(6px);
 }
 
 .MuiListItemText-primary {
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: #34495e;
-  margin-bottom: 12px;
-}
-
-.MuiListItemText-primary:focus {
-  outline: none;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  color: #111827 !important;
 }

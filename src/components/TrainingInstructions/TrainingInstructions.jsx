@@ -1,5 +1,3 @@
-// src/components/TrainingInstructions/TrainingInstructions.jsx
-
 import React from "react";
 import { Typography, List, ListItem, ListItemText, Box } from "@mui/material";
 import styles from "./TrainingInstructions.module.css";
@@ -12,19 +10,24 @@ const TrainingInstructions = () => {
       </Typography>
       <List className={styles.instructionsList}>
         <ListItem>
-          <ListItemText primary="1. Prepare a CSV or JSON file with your sales data." />
+          <Typography className={styles.arrow}>➤</Typography>
+          <ListItemText primary=" Prepare a CSV or JSON file with your sales data." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="2. Ensure it contains columns like date, product name, sales, etc." />
+          <Typography className={styles.arrow}>➤</Typography>
+          <ListItemText primary=" Ensure it contains columns like date, product name, sales, etc." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="3. Click the 'Choose File' button to upload your file." />
+          <Typography className={styles.arrow}>➤</Typography>
+          <ListItemText primary=" Click the 'Choose File' button to upload your file." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="4. Click 'Upload and Train Model' to start training." />
+          <Typography className={styles.arrow}>➤</Typography>
+          <ListItemText primary=" Click 'Upload and Train Model' to start training." />
         </ListItem>
         <ListItem>
-          <ListItemText primary="5. Wait for confirmation that the model has been trained successfully." />
+          <Typography className={styles.arrow}>➤</Typography>
+          <ListItemText primary=" Wait for confirmation that the model has been trained successfully." />
         </ListItem>
       </List>
     </Box>
