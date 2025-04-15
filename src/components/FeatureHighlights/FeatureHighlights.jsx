@@ -1,62 +1,50 @@
-import React from 'react';
-import { Container, Typography, Grid, Paper } from '@mui/material';
-import BarChartIcon from '@mui/icons-material/BarChart';
-import UploadFileIcon from '@mui/icons-material/UploadFile';
-import BoltIcon from '@mui/icons-material/Bolt';
-import DevicesIcon from '@mui/icons-material/Devices';
+import React from "react";
+import { Grid, Typography, Box, Paper } from "@mui/material";
+import styles from "./FeatureHighlights.module.css";
 
-import styles from './FeatureHighlights.module.css';
+const FeatureHighlights = () => {
+  const features = [
+    {
+      title: "Smart Forecasting",
+      description:
+        "Predict sales with smart algorithms and accurate data analysis.",
+    },
+    {
+      title: "Sales Growth",
+      description: "Track the growth of your sales and optimize inventory.",
+    },
+    {
+      title: "Real-time Suggestions",
+      description: "Receive quick and reliable sales and reorder suggestions.",
+    },
+    {
+      title: "User Friendly",
+      description:
+        "An intuitive interface designed for ease of use on any device.",
+    },
+  ];
 
-const features = [
-  {
-    title: 'Smart Forecasting',
-    description: 'Predict future sales based on historical data and upcoming events.',
-    icon: <BarChartIcon className={styles.icon} />,
-  },
-  {
-    title: 'Flexible Input',
-    description: 'Train the model using CSV/JSON files or enter data manually.',
-    icon: <UploadFileIcon className={styles.icon} />,
-  },
-  {
-    title: 'Real-time Suggestions',
-    description: 'Get reorder recommendations instantly after prediction.',
-    icon: <BoltIcon className={styles.icon} />,
-  },
-  {
-    title: 'User-Friendly Design',
-    description: 'Clean UI built for ease of use on desktop, tablet, and mobile.',
-    icon: <DevicesIcon className={styles.icon} />,
-  },
-];
-
-const FeatureHighlights = () => (
-  <Container className={styles.container}>
-    {/* <Typography variant="h5" align="center" className={styles.heading}>
-      Why Use This Tool?
-    </Typography> */}
-    <Grid container spacing={3} className={styles.grid}>
-      {features.map((feat, idx) => (
-        <Grid item xs={12} sm={6} md={3} key={idx}>
-          <Paper
-            className={`${styles.featureCard} ${styles[`delay${idx}`]}`}
-            role="region"
-            aria-label={feat.title}
-          >
-            <div className={styles.iconWrapper} aria-label={`Icon for ${feat.title}`}>
-              {feat.icon}
-            </div>
-            <Typography variant="h6" className={styles.cardTitle}>
-              {feat.title}
-            </Typography>
-            <Typography variant="body2" className={styles.cardDescription}>
-              {feat.description}
-            </Typography>
-          </Paper>
-        </Grid>
-      ))}
-    </Grid>
-  </Container>
-);
+  return (
+    <Box className={styles.container}>
+      <Typography variant="h4" align="center" className={styles.title}>
+        Pepper's Game-Changing Features for Your Success
+      </Typography>
+      <Grid container spacing={3} justifyContent="center">
+        {features.map((feature, index) => (
+          <Grid item xs={12} sm={6} md={3} key={index}>
+            <Paper className={styles.featureCard}>
+              <Typography variant="h6" className={styles.featureTitle}>
+                {feature.title}
+              </Typography>
+              <Typography variant="body2" className={styles.featureDescription}>
+                {feature.description}
+              </Typography>
+            </Paper>
+          </Grid>
+        ))}
+      </Grid>
+    </Box>
+  );
+};
 
 export default FeatureHighlights;

@@ -11,16 +11,16 @@ import styles from "./HomePage.module.css";
 
 const HomePage = () => {
   return (
-    <div className={styles.homePageWrapper}>
+    <div className={styles.page}>
       <Navbar />
       <HeroCarousel />
       <TitleTagline />
 
-      <section className={styles.ecomSection}>
-        <div className={styles.columnLeft}>
+      <section className={styles.splitSection}>
+        <div className={styles.leftPane}>
           <TrainOptions />
         </div>
-        <div className={styles.columnRight}>
+        <div className={styles.rightPane}>
           <FeatureHighlights />
         </div>
       </section>

@@ -1,142 +1,35 @@
-@keyframes fadeInStaggered {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 .container {
-  padding: 0 24px;
-  box-sizing: border-box;
-  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 60px;
 }
 
-/* .heading {
-  font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 30px;
-  color: #1e1e1e;
-} */
-
-.grid {
-  display: flex;
-  justify-content: center;
+.title {
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #242222;
 }
 
-/* Card Styling */
 .featureCard {
-  padding: 24px 20px;
-  border-radius: 12px;
-  background-color: #dbe8d8 !important;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  animation: fadeInStaggered 0.6s ease forwards;
-  opacity: 0;
+  padding: 24px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .featureCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.cardTitle {
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  margin-bottom: 10px;
-  color: #1e1e1e;
-}
-
-.cardDescription {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* Icon Styling */
-.iconWrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.featureTitle {
+  font-weight: 600;
   margin-bottom: 12px;
+  color: #333;
 }
 
-.icon {
-  font-size: 40px;
-  color: black;
-}
-
-/* Animation delays */
-.delay0 {
-  animation-delay: 0s;
-}
-
-.delay1 {
-  animation-delay: 0.2s;
-}
-
-.delay2 {
-  animation-delay: 0.4s;
-}
-
-.delay3 {
-  animation-delay: 0.6s;
-}
-
-/* RESPONSIVENESS */
-
-/* Tablets */
-@media (max-width: 900px) {
-  .container {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    padding: 0 20px;
-  }
-
-  .featureCard {
-    padding: 20px 18px;
-  }
-
-  .cardDescription {
-    font-size: 0.92rem;
-  }
-
-  .icon {
-    font-size: 36px;
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .heading {
-    font-size: 1.5rem;
-  }
-
-  .container {
-    margin-top: 40px;
-    margin-bottom: 20px;
-    padding: 0 16px;
-  }
-
-  .featureCard {
-    padding: 18px 16px;
-  }
-
-  .cardTitle {
-    font-size: 1.05rem;
-  }
-
-  .cardDescription {
-    font-size: 0.9rem;
-  }
-
-  .icon {
-    font-size: 32px;
-  }
+.featureDescription {
+  color: #777;
 }

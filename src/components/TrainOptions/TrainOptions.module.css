@@ -1,62 +1,47 @@
-.wrapper {
-  margin-top: 65px;
+.container {
+  padding: 60px 20px;
+  /* background-color: #f4f6f8; */
 }
 
- .title {
-  color: #333;
-  padding: 15px;
+.title {
+  margin-bottom: 40px;
+  font-size: 32px;
+  font-weight: bold;
+  color: #242222;
 }
 
 .gridContainer {
-  max-width: 900px;
-  width: 100%;
+  margin-top: 20px;
 }
 
-/* Shared button styles */
-.buttonPrimary,
-.buttonSecondary {
-  color: white;
+.card {
+  /* padding: 20px; */
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0px 12px 30px rgba(0, 0, 0, 0.15);
+} */
+
+.button {
+  font-size: 18px;
   font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 20px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-transform: none;
+  padding: 12px;
+  background-color: #007bff;
+  /* color: white; */
+  transition: background-color 0.3s ease;
 }
 
-.buttonPrimary:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(25, 118, 210, 0.3);
-  /* background-color: #9c27b0; */
+.button:hover {
+  background-color: #0056b3;
 }
 
-.buttonSecondary:hover {
-  transform: scale(1.03);
-  box-shadow: 0 6px 18px rgba(156, 39, 176, 0.3);
-  /* background-color: #b300ff; */
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .wrapper {
-    margin-top: 40px;
-    padding: 0 16px;
-  }
-
-  .buttonPrimary,
-  .buttonSecondary {
-    font-size: 0.95rem;
-    padding: 12px 16px;
-  }
-}
-
-@media (max-width: 480px) {
-  .wrapper {
-    margin-top: 30px;
-    padding: 0 12px;
-  }
-
-  .buttonPrimary,
-  .buttonSecondary {
-    font-size: 0.9rem;
-    padding: 10px 14px;
-  }
+.button:focus {
+  outline: none;
 }

@@ -1,12 +1,13 @@
-/* Navbar.module.css */
-
 .appBar {
   background-color: #1e1e2f;
   box-shadow: none;
+  z-index: 1100 !important;  /* Ensure it stays on top */
+  position: sticky !important;
+  top: 0;
 }
 
 .toolbar {
-  color: 	#1e1e1e;
+  color: #1e1e1e;
   min-height: 64px;
   display: flex;
   justify-content: space-between;
