@@ -1,11 +1,12 @@
 /* General container styling for TrainingInstructions */
 .instructionsBox {
-    background-color: #eaf4ff;
+    background-color: #FFFFFF;
     border: 1px solid #ddd;
     padding: 24px;
     border-radius: 12px;
     margin-top: 50px;
     margin-bottom: 50px;
+    opacity: 0.8;
     /* max-width: 450px;
     margin-left: auto;
     margin-right: auto; */
@@ -14,7 +15,7 @@
   .instructionsTitle {
     margin-bottom: 16px;
     font-weight: 600;
-    color: #333;
+    color: #000000;
     text-align: center;
   }
   

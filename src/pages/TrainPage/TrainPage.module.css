@@ -1,31 +1,23 @@
-/* MAIN LAYOUT */
-.trainPageWrapper {
-  background-color: #e9e6e2;
-}
-
 .mainContent {
-  /* background-color: #eaf4ff; */
   padding: 60px 20px;
+  background-color: #6cb36f;
 }
 
-/* GRID ITEMS */
-.gridItem {
+/* .gridItem {
   padding: 20px;
-}
+} */
 
-/* TRAINING CONTAINER */
 .trainContainer {
-  background-color: #fefefe;
+  /* background-color: #fefefe; */
   padding: 80px 20px;
   display: flex;
   justify-content: center;
 }
 
-/* TRAIN BOX STYLING */
 .trainBox {
   width: 100%;
   max-width: 600px;
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 48px 32px;
   border-radius: 16px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
@@ -38,7 +30,6 @@
   box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
 }
 
-/* TITLES AND TEXT */
 .title {
   font-weight: 700;
   font-size: 2rem;
@@ -52,28 +43,69 @@
   margin-bottom: 30px;
 }
 
-/* UPLOAD FORM */
 .uploadFormWrapper {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  /* margin-top: 20px; */
 }
 
-/* SUCCESS MESSAGE */
 .successMessage {
-  margin-top: 40px;
+  /* margin-top: 40px; */
   color: #2e7d32;
   font-weight: 600;
   font-size: 1.1rem;
 }
 
-/* FAQ SECTION */
 .faqSection {
-  background-color: #ffffff;
+  /* background-color: #ffffff; */
   padding: 80px 20px;
   margin-bottom: 40px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
 }
+
+.predictionSection {
+  margin-top: 80px;
+  margin-bottom: 60px;
+  background-color: #90c67c;
+}
+
+.predictionFormWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+}
+
+.predictionImageWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 40px;
+}
+
+.imageContainer {
+  text-align: center;
+}
+
+.imageTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #000000;
+}
+
+.predictionImage {
+  width: 90%;
+  max-width: 625px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+/* .predictionImage:hover {
+  transform: scale(1.03);
+} */
 
 /* RESPONSIVENESS */
 @media (max-width: 768px) {
@@ -97,6 +129,15 @@
   .subtitle {
     font-size: 1rem;
   }
+
+  .predictionFormWrapper {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .predictionImageWrapper {
+    padding-left: 0;
+  }
 }
 
 @media (max-width: 480px) {
@@ -118,5 +159,9 @@
 
   .successMessage {
     font-size: 1rem;
+  }
+
+  .imageTitle {
+    font-size: 1.25rem;
   }
 }
