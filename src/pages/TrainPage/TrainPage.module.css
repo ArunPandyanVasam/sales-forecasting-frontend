@@ -1,6 +1,10 @@
+.trainPageWrapper {
+  background-color: #e9e6e2;
+}
+
 .mainContent {
   padding: 60px 20px;
-  background-color: #6cb36f;
+  background-color: #7db880;
 }
 
 /* .gridItem {
@@ -76,36 +80,20 @@
   padding-right: 40px;
 }
 
-.predictionImageWrapper {
+.whyPredictWrapper {
+  margin: 50px 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 40px;
 }
 
-.imageContainer {
-  text-align: center;
+@media (max-width: 768px) {
+  .whyPredictWrapper {
+    padding-left: 0;
+  }
 }
 
-.imageTitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: #000000;
-}
-
-.predictionImage {
-  width: 90%;
-  max-width: 625px;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease;
-}
-
-/* .predictionImage:hover {
-  transform: scale(1.03);
-} */
 
 /* RESPONSIVENESS */
 @media (max-width: 768px) {

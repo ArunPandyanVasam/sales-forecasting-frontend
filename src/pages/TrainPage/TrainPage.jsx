@@ -9,7 +9,7 @@ import BenefitsOfTraining from "../../components/BenefitsOfTraining/BenefitsOfTr
 import FAQBox from "../../components/FAQBox/FAQBox";
 import TrainingInstructions from "../../components/TrainingInstructions/TrainingInstructions";
 import PredictionForm from "../../components/PredictionForm/PredictionForm";
-import salesGraphImage from "../../assets/images/salesGrapgh.jpg";
+import WhyPredictSales from "../../components/WhyPredictSales/WhyPredictSales";
 
 const TrainPage = () => {
   const [modelTrained, setModelTrained] = useState(false);
@@ -40,7 +40,11 @@ const TrainPage = () => {
           <Typography variant="h4" align="center" className={styles.title}>
             Train Model with File
           </Typography>
-          <Typography variant="body1" align="center" className={styles.subtitle}>
+          <Typography
+            variant="body1"
+            align="center"
+            className={styles.subtitle}
+          >
             Upload your CSV/JSON file to train the model.
           </Typography>
 
@@ -65,17 +69,8 @@ const TrainPage = () => {
           <Grid item xs={12} md={6} className={styles.predictionFormWrapper}>
             <PredictionForm />
           </Grid>
-          <Grid item xs={12} md={6} className={styles.predictionImageWrapper}>
-            <div className={styles.imageContainer}>
-              <Typography variant="h5" align="center" className={styles.imageTitle}>
-                Forecasting Sales Trends
-              </Typography>
-              <img
-                src={salesGraphImage}
-                alt="Sales Forecast Graph"
-                className={styles.predictionImage}
-              />
-            </div>
+          <Grid item xs={12} md={6} className={styles.whyPredictWrapper}>
+            <WhyPredictSales />
           </Grid>
         </Grid>
       </div>
