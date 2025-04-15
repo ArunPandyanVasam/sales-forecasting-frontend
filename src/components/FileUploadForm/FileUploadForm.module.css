@@ -1,59 +1,92 @@
-.fileInputContainer {
+/* General container */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #f4f7fc; */
+  padding: 20px;
+}
+
+/* Box to hold content */
+.uploadBox {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background-color: #ffffff;
-  padding: 24px;
+  align-items: center;
+  padding: 40px;
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
   border-radius: 8px;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 400px;
-  margin: auto;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
+/* Title styling */
 .title {
   font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 24px;
+  color: #333;
 }
 
-.fileInput {
-  display: none;
+/* Instruction text */
+.instructions {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+  max-width: 450px;
 }
 
-.chooseFileLabel {
-  display: inline-block;
+/* File upload input */
+.chooseBtn {
   width: 100%;
-  text-align: center;
-}
-
-.chooseFileButton {
-  width: 100%;
-  padding: 12px 24px;
-  font-weight: 600;
-  border-radius: 30px;
-  transition: background-color 0.3s ease;
-}
-
-.chooseFileButton:hover {
-  background-color: #1976d2;
-}
-
-.fileNameText {
-  margin-top: 16px;
+  max-width: 220px;
+  padding: 12px;
+  border-radius: 5px;
   font-weight: 500;
-  color: #555555;
+  text-transform: capitalize;
+  background-color: #1976d2;
+  color: white;
+  border: 2px solid #1976d2;
 }
 
-.uploadButton {
-  margin-top: 20px;
-  padding: 12px 24px;
+.chooseBtn:hover {
+  background-color: #155a8a;
+  border: 2px solid #155a8a;
+}
+
+/* File name text */
+.fileName {
+  font-size: 14px;
+  color: #555;
+  margin-top: 12px;
+  margin-bottom: 20px;
+}
+
+/* Upload button */
+.uploadBtn {
+  padding: 12px 30px;
+  font-size: 16px;
   font-weight: 600;
-  border-radius: 30px;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.uploadButton:hover {
-  background-color: #1565c0;
+.uploadBtn:disabled {
+  background-color: #d3d3d3;
+}
+
+/* SnackBar (Success Message) */
+.MuiSnackbar-root {
+  bottom: 20px;
+}
+
+.MuiAlert-root {
+  background-color: #4caf50;
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
 }

@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import { Button, Typography, Box, CircularProgress } from '@mui/material';
+import React, { useState, useRef } from 'react';
+import { Box, Typography, Button, CircularProgress, Snackbar, Alert, Paper } from '@mui/material';
 import axios from 'axios';
 import styles from './FileUploadForm.module.css';
 
-const FileUploadForm = ({ onModelTrained }) => {
+const FileUploadPage = () => {
   const [file, setFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [successMessage, setSuccessMessage] = useState('');
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const fileInputRef = useRef();
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
   };
 
-  const handleFileUpload = async () => {
-    if (!file) return alert('Please select a file to upload.');
+  const handleUpload = async () => {
+    if (!file) return alert('Please select a file.');
 
     setLoading(true);
 
@@ -20,59 +23,74 @@ const FileUploadForm = ({ onModelTrained }) => {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/train_model', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
+      const res = await axios.post('http://127.0.0.1:5000/api/train_model', formData, {
+        headers: { 'Content-Type': 'multipart/form-data' },
       });
 
-      if (response.status === 200 && response.data?.message) {
-        const backendMessage = response.data.message;
-        onModelTrained(backendMessage); // pass backend message to parent
+      if (res.status === 200 && res.data.message) {
+        setSuccessMessage(res.data.message); // ✅ Message from backend
+        setSnackbarOpen(true);
+        setFile(null);
+        fileInputRef.current.value = null;
       }
-    } catch (error) {
-      console.error('Error uploading file:', error);
-      alert('File upload failed. Please try again.');
+    } catch (err) {
+      console.error(err);
+      alert('Training failed. Please try again.');
     } finally {
       setLoading(false);
     }
   };
 
+  const handleSnackbarClose = () => setSnackbarOpen(false);
+
   return (
-    <Box className={styles.fileInputContainer}>
-      <Typography variant="h6" className={styles.title}>
-        Upload Your Training File
-      </Typography>
-      <input
-        type="file"
-        onChange={handleFileChange}
-        style={{ display: 'none' }}
-        id="file-input"
-        className={styles.fileInput}
-      />
-      <label htmlFor="file-input" className={styles.chooseFileLabel}>
-        <Button variant="outlined" component="span" color="primary" className={styles.chooseFileButton}>
-          Choose File
-        </Button>
-      </label>
-
-      {file && (
-        <Typography variant="body2" color="textSecondary" className={styles.fileNameText}>
-          {file.name}
+    <Box className={styles.container}>
+      <Paper elevation={6} className={styles.uploadBox}>
+        <Typography variant="h4" gutterBottom className={styles.title}>
+          Upload Your Training File
         </Typography>
-      )}
 
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={handleFileUpload}
-        disabled={loading || !file}
-        className={styles.uploadButton}
-      >
-        {loading ? <CircularProgress size={24} color="inherit" /> : 'Upload and Train Model'}
-      </Button>
+        <Typography variant="body1" color="textSecondary" className={styles.instructions}>
+          Please upload a valid CSV or JSON file containing historical sales data to train the model.
+        </Typography>
+
+        <input
+          type="file"
+          onChange={handleFileChange}
+          ref={fileInputRef}
+          style={{ display: 'none' }}
+          id="file-upload"
+        />
+        <label htmlFor="file-upload">
+          <Button variant="outlined" component="span" className={styles.chooseBtn}>
+            Choose File
+          </Button>
+        </label>
+
+        {file && (
+          <Typography className={styles.fileName}>
+            Selected: {file.name}
+          </Typography>
+        )}
+
+        <Button
+          variant="contained"
+          color="primary"
+          disabled={loading || !file}
+          onClick={handleUpload}
+          className={styles.uploadBtn}
+        >
+          {loading ? <CircularProgress size={24} color="inherit" /> : 'Upload & Train'}
+        </Button>
+      </Paper>
+
+      <Snackbar open={snackbarOpen} autoHideDuration={4000} onClose={handleSnackbarClose}>
+        <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+          {successMessage}
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };
 
-export default FileUploadForm;
+export default FileUploadPage;
