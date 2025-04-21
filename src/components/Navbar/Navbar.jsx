@@ -27,8 +27,6 @@ const Navbar = () => {
 
   const navItems = [
     { label: "Home", to: "/" },
-    { label: "About", to: "/train/file" },
-    { label: "Blog", to: "/train/manual" },
   ];
 
   return (
