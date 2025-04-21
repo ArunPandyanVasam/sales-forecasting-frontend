@@ -27,20 +27,7 @@ const TrainOptions = () => {
           </Paper>
         </Grid>
 
-        <Grid item xs={12} sm={6} md={4}>
-          <Paper className={styles.card}>
-            <Button
-              variant="contained"
-              fullWidth
-              component={Link}
-              to="/train/manual"
-              startIcon={<EditIcon />}
-              className={styles.button}
-            >
-              Add Sales Data Manually
-            </Button>
-          </Paper>
-        </Grid>
+        
       </Grid>
     </Box>
   );

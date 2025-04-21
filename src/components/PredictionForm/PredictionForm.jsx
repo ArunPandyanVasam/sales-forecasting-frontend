@@ -177,7 +177,7 @@ const PredictionForm = () => {
           <Typography><strong>Current Stock:</strong> {predictionResult.current_stock}</Typography>
           <Typography><strong>Predicted Sales (Next Month):</strong> {predictionResult.predicted_sales_next_month}</Typography>
           <Typography><strong>Stock Status:</strong> {predictionResult.stock_status}</Typography>
-          <Typography><strong>Reorder Suggestion:</strong> {predictionResult.reorder_suggestion === 1 ? "Yes" : "No"}</Typography>
+          <Typography><strong>Reorder Suggestion:</strong> {predictionResult.reorder_suggestion}</Typography>
           <Typography><strong>Reasoning:</strong> {predictionResult.reasoning}</Typography>
 
           <Button

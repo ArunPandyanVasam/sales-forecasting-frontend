@@ -28,7 +28,7 @@ const FileUploadPage = () => {
       });
 
       if (res.status === 200 && res.data.message) {
-        setSuccessMessage(res.data.message); // ✅ Message from backend
+        setSuccessMessage(res.data.message); //
         setSnackbarOpen(true);
         setFile(null);
         fileInputRef.current.value = null;
@@ -46,13 +46,6 @@ const FileUploadPage = () => {
   return (
     <Box className={styles.container}>
       <Paper elevation={6} className={styles.uploadBox}>
-        <Typography variant="h4" gutterBottom className={styles.title}>
-          Upload Your Training File
-        </Typography>
-
-        <Typography variant="body1" color="textSecondary" className={styles.instructions}>
-          Please upload a valid CSV or JSON file containing historical sales data to train the model.
-        </Typography>
 
         <input
           type="file"
