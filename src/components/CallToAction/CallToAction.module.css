@@ -10,50 +10,61 @@
 }
 
 .container {
-  background-color: #90c67c;
+  background: linear-gradient(135deg, #8fc86a, #6aa84f);
   color: #1e1e1e;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  animation: fadeInCTA 0.8s ease-out forwards;
+  padding: 60px 20px;
+  animation: fadeInCTA 0.9s ease-out forwards;
   opacity: 0;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 10px 35px rgba(54, 120, 15, 0.3);
+  max-width: 900px;
+  margin: 60px auto;
 }
 
 .content {
   text-align: center;
-  animation: fadeInCTA 0.8s ease-out forwards;
+  animation: fadeInCTA 0.9s ease-out forwards;
   opacity: 0;
-  max-width: 600px;
+  max-width: 650px;
   width: 100%;
 }
 
 .heading {
-  font-weight: 600;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 2.4rem;
+  margin-bottom: 24px;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  letter-spacing: 0.4px;
 }
 
 .subheading {
-  font-size: 1rem;
-  margin-bottom: 30px;
-  color: #1e1e1e;
+  font-size: 1.15rem;
+  margin-bottom: 36px;
+  color: #e0f0d9;
+  font-weight: 500;
+  line-height: 1.5;
 }
 
 .button {
-  background-color: #ff5722 !important;
-  color: white !important;
-  padding: 12px 24px;
-  font-size: 1rem;
-  border-radius: 8px;
-  transition: transform 0.2s ease;
+  background-color: #ff6f3c !important;
+  color: #fff !important;
+  padding: 14px 36px;
+  font-size: 1.15rem;
+  border-radius: 12px;
+  font-weight: 700;
   text-transform: none;
+  box-shadow: 0 6px 16px rgba(255, 111, 60, 0.6);
+  transition: all 0.3s ease;
 }
 
 .button:hover {
-  background-color: #e64a19 !important;
-  transform: scale(1.03);
+  background-color: #e65b28 !important;
+  box-shadow: 0 8px 24px rgba(230, 91, 40, 0.75);
+  transform: scale(1.06);
 }
 
 /* RESPONSIVENESS */
@@ -61,43 +72,38 @@
 /* Tablets */
 @media (max-width: 900px) {
   .container {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding: 50px 16px;
+    margin: 40px auto;
   }
-
   .heading {
-    font-size: 1.6rem;
+    font-size: 2rem;
   }
-
   .subheading {
-    font-size: 0.95rem;
-    margin-bottom: 20px;
+    font-size: 1rem;
+    margin-bottom: 28px;
   }
-
   .button {
-    font-size: 0.95rem;
-    padding: 10px 20px;
+    font-size: 1rem;
+    padding: 12px 28px;
   }
 }
 
 /* Mobile */
 @media (max-width: 600px) {
   .container {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 40px 12px;
+    margin: 30px auto;
   }
-
   .heading {
-    font-size: 1.4rem;
+    font-size: 1.75rem;
+    margin-bottom: 20px;
   }
-
   .subheading {
-    font-size: 0.85rem;
-    margin-bottom: 15px;
-  }
-
-  .button {
     font-size: 0.9rem;
-    padding: 8px 16px;
+    margin-bottom: 20px;
+  }
+  .button {
+    font-size: 0.95rem;
+    padding: 10px 24px;
   }
 }

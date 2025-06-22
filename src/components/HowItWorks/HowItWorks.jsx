@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Typography, Stepper, Step, StepLabel } from '@mui/material';
+import { Container, Typography, Stepper, Step, StepLabel, Box } from '@mui/material';
 import UploadFileIcon from '@mui/icons-material/UploadFile';
 import AutoGraphIcon from '@mui/icons-material/AutoGraph';
 import InventoryIcon from '@mui/icons-material/Inventory';
@@ -8,39 +8,30 @@ import AssignmentTurnedInIcon from '@mui/icons-material/AssignmentTurnedIn';
 import styles from './HowItWorks.module.css';
 
 const steps = [
-  {
-    label: 'Easily upload or input your sales data',
-    icon: <UploadFileIcon className={styles.icon} />
-  },
-  {
-    label: 'Let Pepper train a smart forecasting model for you',
-    icon: <AutoGraphIcon className={styles.icon} />
-  },
-  {
-    label: 'Provide product details to get instant insights',
-    icon: <InventoryIcon className={styles.icon} />
-  },
-  {
-    label: 'Receive actionable predictions and reorder guidance',
-    icon: <AssignmentTurnedInIcon className={styles.icon} />
-  }
+  { label: 'Easily upload or input your sales data', icon: <UploadFileIcon /> },
+  { label: 'Let Pepper train a smart forecasting model for you', icon: <AutoGraphIcon /> },
+  { label: 'Provide product details to get instant insights', icon: <InventoryIcon /> },
+  { label: 'Receive actionable predictions and reorder guidance', icon: <AssignmentTurnedInIcon /> },
 ];
 
-
 const HowItWorks = () => (
-  <Container className={styles.container}>
-    <Typography variant="h5" align="center" className={styles.heading}>
+  <Container className={styles.container} maxWidth="lg">
+    <Typography variant="h4" className={styles.heading} gutterBottom>
       How It Works
     </Typography>
-    <Stepper alternativeLabel className={styles.stepper}>
+    <Stepper alternativeLabel className={styles.stepper} nonLinear>
       {steps.map((step, index) => (
-        <Step key={index}>
+        <Step key={index} className={styles.step}>
           <StepLabel
-            icon={step.icon}
-            className={styles.stepWrapper}
-            style={{ animationDelay: `${index * 0.2}s` }}
+            StepIconComponent={() => (
+              <Box className={styles.iconWrapper} aria-hidden="true">
+                {React.cloneElement(step.icon, { className: styles.icon })}
+              </Box>
+            )}
+            className={styles.stepLabel}
+            style={{ animationDelay: `${index * 0.25}s` }}
           >
-            <span className={styles.stepLabel}>{step.label}</span>
+            <span className={styles.stepText}>{step.label}</span>
           </StepLabel>
         </Step>
       ))}

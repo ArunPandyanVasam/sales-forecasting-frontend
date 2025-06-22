@@ -6,21 +6,22 @@ import styles from './CallToAction.module.css';
 const CallToAction = () => (
   <Box className={styles.container}>
     <Container className={styles.content}>
-      <Typography variant="h5" className={styles.heading} gutterBottom>
+      <Typography variant="h4" className={styles.heading} gutterBottom>
         Ready to Get Accurate Sales Predictions?
       </Typography>
       <Typography variant="body1" className={styles.subheading} paragraph>
-        Start by uploading your data or entering details manually.
+        Start by uploading your data or entering details manually. Experience smarter forecasting today.
       </Typography>
-      {/* <Button
+      <Button
         variant="contained"
         component={Link}
         to="/train/file"
         size="large"
         className={styles.button}
+        disableElevation
       >
         Get Started
-      </Button> */}
+      </Button>
     </Container>
   </Box>
 );

@@ -11,6 +11,7 @@ import {
   ListItemText,
   useMediaQuery,
   Box,
+  Divider,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Link } from "react-router-dom";
@@ -30,7 +31,7 @@ const Navbar = () => {
   ];
 
   return (
-    <AppBar position="sticky" className={styles.appBar}>
+    <AppBar position="sticky" className={styles.appBar} elevation={0}>
       <Toolbar className={styles.toolbar}>
         <Box display="flex" alignItems="center" className={styles.logoWrapper}>
           <img src={logo} alt="Logo" className={styles.logo} />
@@ -45,27 +46,33 @@ const Navbar = () => {
               <MenuIcon />
             </IconButton>
             <Drawer anchor="right" open={drawerOpen} onClose={toggleDrawer}>
-              <List className={styles.drawerList}>
-                {navItems.map((item) => (
-                  <ListItem
-                    button
-                    key={item.to}
-                    className={styles.drawerListItem}
-                    onClick={toggleDrawer}
-                  >
-                    <Link to={item.to} className={styles.drawerLink}>
-                      <ListItemText
-                        primary={item.label}
-                        className={styles.drawerItemText}
-                      />
-                    </Link>
-                  </ListItem>
-                ))}
-              </List>
+              <Box className={styles.drawer}>
+                <Typography variant="h6" className={styles.drawerTitle}>
+                  Menu
+                </Typography>
+                <Divider />
+                <List className={styles.drawerList}>
+                  {navItems.map((item) => (
+                    <ListItem
+                      button
+                      key={item.to}
+                      className={styles.drawerListItem}
+                      onClick={toggleDrawer}
+                    >
+                      <Link to={item.to} className={styles.drawerLink}>
+                        <ListItemText
+                          primary={item.label}
+                          className={styles.drawerItemText}
+                        />
+                      </Link>
+                    </ListItem>
+                  ))}
+                </List>
+              </Box>
             </Drawer>
           </>
         ) : (
-          <Box display="flex">
+          <Box display="flex" gap={2}>
             {navItems.map((item) => (
               <Button
                 key={item.to}

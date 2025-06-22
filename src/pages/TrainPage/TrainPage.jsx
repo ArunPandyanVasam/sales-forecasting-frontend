@@ -128,7 +128,6 @@ const TrainPage = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.6, delay: 1 }}
       >
-        <CallToAction />
         <Footer />
       </motion.div>
     </div>

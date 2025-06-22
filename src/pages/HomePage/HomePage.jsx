@@ -16,7 +16,7 @@ const HomePage = () => {
       <HeroCarousel />
       <TitleTagline />
 
-      <section className={styles.splitSection}>
+      <section className={styles.splitSection}> 
         <div className={styles.leftPane}>
           <TrainOptions />
         </div>
